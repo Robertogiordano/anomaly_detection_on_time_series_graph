@@ -10,3 +10,14 @@ In un contesto non anomalo, sensori vicini raccolgono dati simili che evolvono i
 Dato un determinato numero di sensori IoT distribuiti nello spazio, è possibile costruire un grafo basato sulla similarità spaziale e temporale dei dati raccolti da ciascun sensore. Le anomalie, come i cyberattacchi, possono manifestarsi come cambiamenti inaspettati nelle metriche registrate (ad esempio, nei valori dei sensori). Monitorando l'evoluzione temporale di questi grafi, si possono individuare variazioni che potrebbero indicare attacchi o altre irregolarità nel sistema.
 
 Vorremmo sviluppare un anomaly detector che sfrutti questa correlazione spaziale e temporale dei dati utilizzando una STGNN o una STGAE. Esistono implementazioni di STGNN / STGAE in letteratura, ma andrebbero adattate al nostro specifico contesto. Se il progetto ti interessa, possiamo sentirci per una call di approfondimento.
+
+## NASA Dataset
+- https://disc.gsfc.nasa.gov/datasets/SNDRSNIML3CMCCPN_2/summary?keywords=Average%20Precipitation
+
+## Fonti
+### STGNN/STGAE/GNN:
+1. https://proceedings.mlr.press/v164/wiederer22a/wiederer22a.pdf
+2. https://www.sciencedirect.com/science/article/pii/S036054422302340X?casa_token=j9cGCl-4aLkAAAAA:hXAS6zQkpx3Cqcfmu2NzQRwO6qkoMei94EEZGlAUEbGiEtOlJzH7pw3EA60dFakVJPS8Id2rCII
+3. https://www.sciencedirect.com/science/article/pii/S0167739X21002740?casa_token=2MazexWTIPoAAAAA:vniQuciAsY0V5NWu3js2YrBGHJI4Vro2pK8XzEZMe1UiPUZuHBiaIaMc2WY2hbill2rZbHjV4uw
+4. https://ieeexplore.ieee.org/abstract/document/10316684?casa_token=nVLWdmDNepYAAAAA:XIsH5Aw4Q71L8iTQ7vYuhgIgzJkDrwivHw8hi5Uyb8aRVaEkmY5YuQGOT_8tApxI552kFNr74A
+5. https://ieeexplore.ieee.org/document/9471816
