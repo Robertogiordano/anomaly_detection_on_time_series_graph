@@ -15,9 +15,21 @@ Vorremmo sviluppare un anomaly detector che sfrutti questa correlazione spaziale
 - https://disc.gsfc.nasa.gov/datasets/SNDRSNIML3CMCCPN_2/summary?keywords=Average%20Precipitation
 
 ## Fonti
-### STGNN/STGAE/GNN:
+### STGNN/STGAE/GNN paper:
 1. https://proceedings.mlr.press/v164/wiederer22a/wiederer22a.pdf
 2. https://www.sciencedirect.com/science/article/pii/S036054422302340X?casa_token=j9cGCl-4aLkAAAAA:hXAS6zQkpx3Cqcfmu2NzQRwO6qkoMei94EEZGlAUEbGiEtOlJzH7pw3EA60dFakVJPS8Id2rCII
 3. https://www.sciencedirect.com/science/article/pii/S0167739X21002740?casa_token=2MazexWTIPoAAAAA:vniQuciAsY0V5NWu3js2YrBGHJI4Vro2pK8XzEZMe1UiPUZuHBiaIaMc2WY2hbill2rZbHjV4uw
 4. https://ieeexplore.ieee.org/abstract/document/10316684?casa_token=nVLWdmDNepYAAAAA:XIsH5Aw4Q71L8iTQ7vYuhgIgzJkDrwivHw8hi5Uyb8aRVaEkmY5YuQGOT_8tApxI552kFNr74A
 5. https://ieeexplore.ieee.org/document/9471816
+
+### Tutorial vari e link utili:
+1. Come leggere i file netcdf (nc): https://stackoverflow.com/questions/36360469/read-nc-netcdf-files-using-python
+2. PyGod, come creare al volo una GNN/GAE: https://docs.pygod.org/en/latest/
+3. Come creare una GAE/GNN con pytorch geometric: https://github.com/pyg-team/pytorch_geometric/blob/master/examples/autoencoder.py
+
+### Implementazioni esistenti di STGNN:
+1. https://github.com/LMissher/STGNN
+2. https://github.com/Yangxin666/STGAE
+3. https://github.com/ZhouKanglei/STGAE
+4. https://github.com/LMissher/STGNN
+5. https://github.com/xiaoxiaotibaiwan/STGNN
