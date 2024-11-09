@@ -16,11 +16,11 @@ Vorremmo sviluppare un anomaly detector che sfrutti questa correlazione spaziale
 
 ## Fonti
 ### STGNN/STGAE/GNN paper:
-1. https://proceedings.mlr.press/v164/wiederer22a/wiederer22a.pdf
-2. https://www.sciencedirect.com/science/article/pii/S036054422302340X?casa_token=j9cGCl-4aLkAAAAA:hXAS6zQkpx3Cqcfmu2NzQRwO6qkoMei94EEZGlAUEbGiEtOlJzH7pw3EA60dFakVJPS8Id2rCII
-3. https://www.sciencedirect.com/science/article/pii/S0167739X21002740?casa_token=2MazexWTIPoAAAAA:vniQuciAsY0V5NWu3js2YrBGHJI4Vro2pK8XzEZMe1UiPUZuHBiaIaMc2WY2hbill2rZbHjV4uw
-4. https://ieeexplore.ieee.org/abstract/document/10316684?casa_token=nVLWdmDNepYAAAAA:XIsH5Aw4Q71L8iTQ7vYuhgIgzJkDrwivHw8hi5Uyb8aRVaEkmY5YuQGOT_8tApxI552kFNr74A
-5. https://ieeexplore.ieee.org/document/9471816
+1. Anomaly Detection in Multi-Agent Trajectories for Automated Driving: https://proceedings.mlr.press/v164/wiederer22a/wiederer22a.pdf
+2. A novel spatial–temporal generative autoencoder for wind speed uncertainty forecastin: https://www.sciencedirect.com/science/article/pii/S036054422302340X?casa_token=j9cGCl-4aLkAAAAA:hXAS6zQkpx3Cqcfmu2NzQRwO6qkoMei94EEZGlAUEbGiEtOlJzH7pw3EA60dFakVJPS8Id2rCII
+3. STGNN-TTE: Travel time estimation via spatial–temporal graph neural network: https://www.sciencedirect.com/science/article/pii/S0167739X21002740?casa_token=2MazexWTIPoAAAAA:vniQuciAsY0V5NWu3js2YrBGHJI4Vro2pK8XzEZMe1UiPUZuHBiaIaMc2WY2hbill2rZbHjV4uw
+4. Correlation-Aware Spatial–Temporal Graph Learning for Multivariate Time-Series Anomaly Detection: https://ieeexplore.ieee.org/abstract/document/10316684?casa_token=nVLWdmDNepYAAAAA:XIsH5Aw4Q71L8iTQ7vYuhgIgzJkDrwivHw8hi5Uyb8aRVaEkmY5YuQGOT_8tApxI552kFNr74A
+5. Graph Neural Networks for Anomaly Detection in Industrial Internet of Things: https://ieeexplore.ieee.org/document/9471816
 
 ### Tutorial vari e link utili:
 1. Come leggere i file netcdf (nc): https://stackoverflow.com/questions/36360469/read-nc-netcdf-files-using-python
