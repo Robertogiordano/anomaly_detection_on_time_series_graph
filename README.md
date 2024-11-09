@@ -21,6 +21,7 @@ Vorremmo sviluppare un anomaly detector che sfrutti questa correlazione spaziale
 3. STGNN-TTE: Travel time estimation via spatial–temporal graph neural network: https://www.sciencedirect.com/science/article/pii/S0167739X21002740?casa_token=2MazexWTIPoAAAAA:vniQuciAsY0V5NWu3js2YrBGHJI4Vro2pK8XzEZMe1UiPUZuHBiaIaMc2WY2hbill2rZbHjV4uw
 4. Correlation-Aware Spatial–Temporal Graph Learning for Multivariate Time-Series Anomaly Detection: https://ieeexplore.ieee.org/abstract/document/10316684?casa_token=nVLWdmDNepYAAAAA:XIsH5Aw4Q71L8iTQ7vYuhgIgzJkDrwivHw8hi5Uyb8aRVaEkmY5YuQGOT_8tApxI552kFNr74A
 5. Graph Neural Networks for Anomaly Detection in Industrial Internet of Things: https://ieeexplore.ieee.org/document/9471816
+6. Anomaly detection using spatial and temporal information in multivariate time series: https://www.nature.com/articles/s41598-023-31193-8
 
 ### Tutorial vari e link utili:
 1. Come leggere i file netcdf (nc): https://stackoverflow.com/questions/36360469/read-nc-netcdf-files-using-python
