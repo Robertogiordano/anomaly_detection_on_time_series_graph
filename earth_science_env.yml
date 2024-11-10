@@ -1,0 +1,25 @@
+# Create an environment file for Earth Science
+# This file can be used to create a new environment with the following command:
+# conda env create -f earth_science_env.yml
+
+name: earth_science_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9  # You can choose a specific version if needed
+  - numpy
+  - pandas
+  - xarray
+  - h5py
+  - netcdf4
+  - pyhdf  # For HDF4 support
+  - hdf5
+  - hdf4
+  - scipy
+  - matplotlib
+  - cartopy  # For geospatial plotting
+  - geopandas  # For geospatial data handling
+  - rasterio  # For raster data support
+  - pyproj  # For projection transformations
+  - requests  # For HTTP requests (useful for data download)
+  - jupyterlab  # Optional: Jupyter Lab for interactive work
