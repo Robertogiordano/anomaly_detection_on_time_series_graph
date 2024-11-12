@@ -23,6 +23,11 @@ Vorremmo sviluppare un anomaly detector che sfrutti questa correlazione spaziale
 5. Graph Neural Networks for Anomaly Detection in Industrial Internet of Things: https://ieeexplore.ieee.org/document/9471816
 6. Anomaly detection using spatial and temporal information in multivariate time series: https://www.nature.com/articles/s41598-023-31193-8
 
+7. Learning Convolutional Neural Networks for Graphs: https://arxiv.org/pdf/1605.05273
+8. Spatio-Temporal Graph Convolutional Networks: A Deep Learning Frameworkfor Traffic Forecasting: https://arxiv.org/pdf/1709.04875
+9. STGAE: Spatial-Temporal Graph Auto-Encoder for Hand Motion Denoising: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9583812
+10. Spatial-Temporal Graph Auto-Encoder for Traffic Flow Prediction: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4250436
+
 ### Tutorial vari e link utili:
 1. Come leggere i file netcdf (nc): https://stackoverflow.com/questions/36360469/read-nc-netcdf-files-using-python
 2. PyGod, come creare al volo una GNN/GAE: https://docs.pygod.org/en/latest/
@@ -30,7 +35,7 @@ Vorremmo sviluppare un anomaly detector che sfrutti questa correlazione spaziale
 
 ### Implementazioni esistenti di STGNN:
 1. https://github.com/LMissher/STGNN
-2. https://github.com/Yangxin666/STGAE
+2. **Spatio-Temporal Denoising Graph Autoencoder (STGAE)**: https://github.com/Yangxin666/STGAE
 3. https://github.com/ZhouKanglei/STGAE
 4. https://github.com/LMissher/STGNN
 5. https://github.com/xiaoxiaotibaiwan/STGNN
