@@ -8,7 +8,7 @@ from datetime import datetime
 # Caricamento dati da file
 def load_data():
     all_data = []
-    file_path = "subdata/"  # Sostituisci con il percorso della tua cartella
+    file_path = "augmented_data/"  # Sostituisci con il percorso della tua cartella
     for filename in os.listdir(file_path):
         if filename.endswith(".csv"):
             data = pd.read_csv(os.path.join(file_path, filename))
