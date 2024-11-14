@@ -1,0 +1,19 @@
+{
+    "data_augmented": true,
+    "training_graphs": 255,
+    "validation_graphs": 55,
+    "test_graphs": 55,
+    "number_nodes": 1657,
+    "number_edges": 12564,
+    "node_features_shape": [
+        1657,
+        8
+    ],
+    "edge_index_shape": [
+        2,
+        12564
+    ],
+    "training_batches": 64,
+    "validation_batches": 14,
+    "test_batches": 55
+}
