@@ -1,0 +1,7 @@
+{
+    "Accuracy": 0.8,
+    "Recall": 1.0,
+    "Precision": 0.42105263157894735,
+    "F1 Score": 0.5925925925925926,
+    "best_epoch": 50
+}
