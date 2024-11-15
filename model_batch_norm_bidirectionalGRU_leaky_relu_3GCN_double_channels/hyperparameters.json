@@ -1,0 +1,10 @@
+{
+    "in_channels": 8,
+    "hidden_channels": 16,
+    "out_channels": 8,
+    "lstm_hidden_dim": 32,
+    "learning_rate": 0.001,
+    "num_epochs": 50,
+    "optimizer": "Adam",
+    "model_params": 24104
+}
