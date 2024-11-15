@@ -1,0 +1,10 @@
+SpatialTemporalGraphAutoencoder(
+  (gcn1): GCNConv(8, 16)
+  (gcn2): GCNConv(16, 16)
+  (batch_norm1): BatchNorm(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (batch_norm2): BatchNorm(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (gru): GRU(16, 32, batch_first=True, bidirectional=True)
+  (decoder_gru): GRU(64, 16, batch_first=True)
+  (gcn_decoder1): GCNConv(16, 16)
+  (gcn_decoder2): GCNConv(16, 8)
+)
