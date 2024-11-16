@@ -1,18 +1,52 @@
-# anomaly_detection_on_time_series_graph
+# Anomaly Detection on Time Series Graphs
 
-Anomaly Detection su Time Series di grafi in ambito IoT, sfruttando la correlazione spaziale e temporale dei dati.  
-In particolare:  
-- La correlazione spaziale si riferisce alla similarità dei dati raccolti da nodi vicini tra loro nello spazio (es. sensori di temperatura nello stesso lato della stanza che misurano temperature simili).  
-- La correlazione temporale, invece, riguarda la coerenza dei dati raccolti dallo stesso dispositivo nel tempo (es. assenza di picchi casuali nei valori registrati).  
+Anomaly detection in time series data from IoT systems, leveraging both spatial and temporal correlations. Specifically:
 
-In un contesto non anomalo, sensori vicini raccolgono dati simili che evolvono in modo coerente nel tempo.
+- **Spatial Correlation**: Refers to the similarity of data collected by sensors located near each other in space (e.g., temperature sensors on the same side of a room recording similar values).
+- **Temporal Correlation**: Refers to the consistency of data recorded by the same device over time (e.g., absence of random spikes in recorded values).
 
-Dato un determinato numero di sensori IoT distribuiti nello spazio, è possibile costruire un grafo basato sulla similarità spaziale e temporale dei dati raccolti da ciascun sensore. Le anomalie, come i cyberattacchi, possono manifestarsi come cambiamenti inaspettati nelle metriche registrate (ad esempio, nei valori dei sensori). Monitorando l'evoluzione temporale di questi grafi, si possono individuare variazioni che potrebbero indicare attacchi o altre irregolarità nel sistema.
+In a non-anomalous scenario, neighboring sensors collect similar data that evolves coherently over time.
 
-Vorremmo sviluppare un anomaly detector che sfrutti questa correlazione spaziale e temporale dei dati utilizzando una STGNN o una STGAE. Esistono implementazioni di STGNN / STGAE in letteratura, ma andrebbero adattate al nostro specifico contesto. Se il progetto ti interessa, possiamo sentirci per una call di approfondimento.
+## Approach
 
-## NASA Dataset
-- https://disc.gsfc.nasa.gov/datasets/SNDRSNIML3CMCCPN_2/summary?keywords=Average%20Precipitation
+Given a set of IoT sensors distributed in space, we can construct a graph based on the spatial and temporal similarity of the data collected by each sensor. Anomalies, such as cyberattacks, might manifest as unexpected changes in recorded metrics (e.g., sensor values). By monitoring the temporal evolution of these graphs, we can detect deviations that indicate potential attacks or irregularities in the system.
+
+### Objective
+
+We aim to develop an anomaly detector that exploits the spatial and temporal correlation of data using **Spatial-Temporal Graph Autoencoders (STGAE)**.
+
+# Repository Organization
+
+## Dataset Source
+The original dataset is sourced from [NASA Earthdata](https://disc.gsfc.nasa.gov/datasets/SNDRSNIML3CMCCPN_2/summary?keywords=Average%20Precipitation).
+
+## Data Structure
+- **`/data/SNDRSNML2RMS_1-20241110_220957`**: Contains all granules from 2015, sampled daily every 3 months.
+  
+### Data Processing Overview
+1. **Initial Analysis**:
+   - Conducted in the notebook `NASA_analysis.ipynb`.
+   - Outputs: `data/data.csv`, the result of an initial processing phase.
+
+2. **Preprocessing**:
+   - Performed in `anomaly_detection_on_time_series_graph.ipynb`.
+   - Outputs: `data/data_preprocessed.csv`.
+   - This step retains all relevant information and formats/approximates data as needed.
+
+3. **Node Connections**:
+   - The `node_connections/edge_index` file defines relationships between nodes.
+   - Contains 1,657 nodes common across granules.
+
+### Data Files
+- **`data/subdata`**:
+  - Contains the node features for each node for every recorded day.
+  
+- **`data/augmented_data`**:
+  - Includes node features for all days of the year (filled for missing days).
+  - Augmented through interpolation with added noise to maintain structural integrity.
+
+## Variable Analysis
+- Use `dashboard.py` for detailed variable analysis and visualization.
 
 ## Fonti
 ### STGNN/STGAE/GNN paper:
