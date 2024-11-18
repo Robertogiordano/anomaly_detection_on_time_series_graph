@@ -1,0 +1,8 @@
+{
+    "corruption_level": 0.3,
+    "features_indices": [
+        1,
+        7
+    ],
+    "anomaly_threshold": 1.4599887731218628
+}
