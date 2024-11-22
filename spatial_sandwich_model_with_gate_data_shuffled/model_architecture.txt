@@ -1,0 +1,30 @@
+SimpleSTConvAE(
+  (layers): ModuleList(
+    (0): SimpleEncoder(
+      (graph_conv): SimpleSpatialConv(
+        (conv): ChebConv(8, 16, K=3, normalization=sym)
+      )
+      (temporal_conv): SimpleTemporalConv(
+        (conv1): Conv2d(16, 16, kernel_size=(1, 4), stride=(1, 2), padding=(0, 1))
+        (conv2): Conv2d(16, 16, kernel_size=(1, 4), stride=(1, 2), padding=(0, 1))
+        (conv3): Conv2d(16, 16, kernel_size=(1, 4), stride=(1, 2), padding=(0, 1))
+      )
+      (graph_conv_2): SimpleSpatialConv(
+        (conv): ChebConv(16, 32, K=3, normalization=sym)
+      )
+    )
+    (1): SimpleDecoder(
+      (graph_deconv): SimpleSpatialConv(
+        (conv): ChebConv(32, 16, K=3, normalization=sym)
+      )
+      (temporal_deconv): SimpleTemporalDeConv(
+        (deconv1): ConvTranspose2d(16, 16, kernel_size=(1, 4), stride=(1, 2), padding=(0, 1))
+        (deconv2): ConvTranspose2d(16, 16, kernel_size=(1, 4), stride=(1, 2), padding=(0, 1))
+        (deconv3): ConvTranspose2d(16, 16, kernel_size=(1, 4), stride=(1, 2), padding=(0, 1))
+      )
+      (graph_deconv_2): SimpleSpatialConv(
+        (conv): ChebConv(16, 8, K=3, normalization=sym)
+      )
+    )
+  )
+)
