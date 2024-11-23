@@ -1,8 +1,0 @@
-SpatialTemporalGraphAutoencoder(
-  (gcn1): GCNConv(8, 16)
-  (gcn2): GCNConv(16, 16)
-  (lstm): LSTM(16, 32, batch_first=True)
-  (decoder_lstm): LSTM(32, 16, batch_first=True)
-  (gcn_decoder1): GCNConv(16, 16)
-  (gcn_decoder2): GCNConv(16, 8)
-)
