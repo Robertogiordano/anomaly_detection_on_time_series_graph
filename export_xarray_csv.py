@@ -44,7 +44,7 @@ def process_file(file, PATH, mapping):
     return rows
 
 def main():
-    PATH='SNDRSNML2RMS_1-20241110_220957'
+    PATH='SNDRSNML2RMS_1-20241122_155702'
     mapping={
         'file': 'id', #file name
         'atrack': 'atrack', #along-track index
@@ -85,7 +85,7 @@ def main():
     df = pd.DataFrame(all_rows, columns=mapping.keys())
     
     # Save final DataFrame to CSV
-    df.to_csv('data.csv', index=False)
+    df.to_csv('data_2013_2015.csv', index=False)
     print("Data saved to data.csv")
 
 # Run the main function
