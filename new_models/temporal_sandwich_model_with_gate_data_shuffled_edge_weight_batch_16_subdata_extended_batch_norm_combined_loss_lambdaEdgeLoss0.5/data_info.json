@@ -1,0 +1,22 @@
+{
+    "data_augmented": false,
+    "num_nodes": 1657,
+    "num_features": 8,
+    "time_steps": 16,
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "test_ratio": 0.15,
+    "train_batch_size": 16,
+    "val_batch_size": 16,
+    "test_batch_size": 1,
+    "num_train_batches": 11,
+    "num_val_batches": 3,
+    "num_test_batches": 35,
+    "edge_index_shape": [
+        2,
+        12564
+    ],
+    "edge_weight_shape": [
+        12564
+    ]
+}
