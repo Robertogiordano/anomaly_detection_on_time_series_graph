@@ -99,7 +99,7 @@ app.layout = html.Div([
     html.Label("Select Corruption probability:"),
     dcc.Slider(
         id="threshold-slider",
-        min=0.1,
+        min=0.0,
         max=1.0,
         step=0.1,
         value=0.5,
@@ -200,11 +200,11 @@ def update_tables(baseline, new, file, threshold):
             html.Thead(html.Tr([html.Th(col) for col in ["Class", "Precision_Diff", "Recall_Diff", "Accuracy", "F1-Score_Diff"]])),
             html.Tbody([
                 html.Tr([
-                html.Td(df.iloc[i]["Class"]),
-                html.Td(html.Span(f'{df.iloc[i]["Precision_Diff"]:.2f}', style={"color": "green" if df.iloc[i]["Precision_Diff"] > 0 else "red" if df.iloc[i]["Precision_Diff"] < 0 else "grey"})),
-                html.Td(html.Span(f'{df.iloc[i]["Recall_Diff"]:.2f}', style={"color": "green" if df.iloc[i]["Recall_Diff"] > 0 else "red" if df.iloc[i]["Recall_Diff"] < 0 else "grey"})),
-                html.Td(html.Span(f'{df.iloc[i]["Accuracy_Diff"]:.2f}', style={"color": "green" if df.iloc[i]["Accuracy_Diff"] > 0 else "red" if df.iloc[i]["Accuracy_Diff"] < 0 else "grey"})),
-                html.Td(html.Span(f'{df.iloc[i]["F1-Score_Diff"]:.2f}', style={"color": "green" if df.iloc[i]["F1-Score_Diff"] > 0 else "red" if df.iloc[i]["F1-Score_Diff"] < 0 else "grey"})),
+            html.Td(df.iloc[i]["Class"]),
+            html.Td(html.Span(f'{df.iloc[i]["Precision_Diff"]:.2f}', style={"color": "green" if round(df.iloc[i]["Precision_Diff"], 2) > 0 else "red" if round(df.iloc[i]["Precision_Diff"], 2) < 0 else "grey"})),
+            html.Td(html.Span(f'{df.iloc[i]["Recall_Diff"]:.2f}', style={"color": "green" if round(df.iloc[i]["Recall_Diff"], 2) > 0 else "red" if round(df.iloc[i]["Recall_Diff"], 2) < 0 else "grey"})),
+            html.Td(html.Span(f'{df.iloc[i]["Accuracy_Diff"]:.2f}', style={"color": "green" if round(df.iloc[i]["Accuracy_Diff"], 2) > 0 else "red" if round(df.iloc[i]["Accuracy_Diff"], 2) < 0 else "grey"})),
+            html.Td(html.Span(f'{df.iloc[i]["F1-Score_Diff"]:.2f}', style={"color": "green" if round(df.iloc[i]["F1-Score_Diff"], 2) > 0 else "red" if round(df.iloc[i]["F1-Score_Diff"], 2) < 0 else "grey"})),
                 ])
                 for i in range(len(df))
             ])
