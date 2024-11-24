@@ -81,13 +81,13 @@ app.layout = html.Div([
         html.Label("Select Baseline Model:"),
         dcc.Dropdown(
             id="baseline-model",
-            options=[{"label": model, "value": model} for model in final_df["Model"].unique()],
+            options=[{"label": model, "value": model} for model in sorted(final_df["Model"].unique())],
             placeholder="Select Baseline Model"
         ),
         html.Label("Select New Model:"),
         dcc.Dropdown(
             id="new-model",
-            options=[{"label": model, "value": model} for model in final_df["Model"].unique()],
+            options=[{"label": model, "value": model} for model in sorted(final_df["Model"].unique())],
             placeholder="Select New Model"
         ),
         html.Label("Select File:"),
