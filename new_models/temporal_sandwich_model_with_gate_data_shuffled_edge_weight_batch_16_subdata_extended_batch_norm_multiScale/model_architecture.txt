@@ -1,0 +1,54 @@
+MultiscaleSTConvAE(
+  (layers): ModuleList(
+    (0): MultiscaleEncoder(
+      (temporal_conv): MultiscaleTemporalConv(
+        (convs): ModuleList(
+          (0): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+          (1): Conv2d(8, 8, kernel_size=(1, 5), stride=(1, 1), padding=(0, 2))
+          (2): Conv2d(8, 8, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3))
+        )
+        (batch_norm): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (graph_conv): MultiscaleSpatialConv(
+        (convs): ModuleList(
+          (0): ChebConv(8, 16, K=2, normalization=sym)
+          (1): ChebConv(8, 16, K=3, normalization=sym)
+          (2): ChebConv(8, 16, K=4, normalization=sym)
+        )
+      )
+      (temporal_conv_2): MultiscaleTemporalConv(
+        (convs): ModuleList(
+          (0): Conv2d(16, 32, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+          (1): Conv2d(16, 32, kernel_size=(1, 5), stride=(1, 1), padding=(0, 2))
+          (2): Conv2d(16, 32, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3))
+        )
+        (batch_norm): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): MultiscaleDecoder(
+      (temporal_deconv): MultiscaleTemporalConv(
+        (convs): ModuleList(
+          (0): Conv2d(32, 16, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+          (1): Conv2d(32, 16, kernel_size=(1, 5), stride=(1, 1), padding=(0, 2))
+          (2): Conv2d(32, 16, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3))
+        )
+        (batch_norm): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+      (graph_deconv): MultiscaleSpatialConv(
+        (convs): ModuleList(
+          (0): ChebConv(16, 8, K=2, normalization=sym)
+          (1): ChebConv(16, 8, K=3, normalization=sym)
+          (2): ChebConv(16, 8, K=4, normalization=sym)
+        )
+      )
+      (temporal_deconv_2): MultiscaleTemporalConv(
+        (convs): ModuleList(
+          (0): Conv2d(8, 8, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1))
+          (1): Conv2d(8, 8, kernel_size=(1, 5), stride=(1, 1), padding=(0, 2))
+          (2): Conv2d(8, 8, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3))
+        )
+        (batch_norm): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+)
