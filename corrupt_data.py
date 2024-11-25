@@ -106,7 +106,7 @@ def process_combination(args):
     """Process a specific combination of variables."""
     df, nodes, variables, combination = args
     name = '_'.join(combination)
-    path = f'corruption2/{name}'
+    path = f'subdata_extended_corrupted/{name}'
     os.makedirs(path, exist_ok=True)
 
     # Corrupt data
@@ -127,9 +127,10 @@ def process_combination(args):
 def parallelize_corruption(df, nodes, variables):
     """Parallelize the corruption and processing of data."""
     combinations_tasks = [
-        (df, nodes, variables, combination)
-        for i in range(1, 8)
-        for combination in combinations(variables, i)
+        [1,2,3,4,5,6,7],
+        [1,7],
+        [2,3],
+        [3]
     ]
     
     # Use a pool of workers to process each combination
@@ -143,7 +144,7 @@ def parallelize_corruption(df, nodes, variables):
 
 
 
-df=pd.read_csv('data/data_preprocessed.csv')
+df=pd.read_csv('data/data_preprocessed_2013_2015.csv')
 
 # Normalize all the variables
 variables = ['solar_zenith_angle', 
